@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive moving storyboard">
+  <meta name="theme-color" content="#050505">
+
+  <title>Moving Storyboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scrollProgress"></span>
+  </div>
+
+  <!--
+    MUSIC
+    Put your actual song here:
+    assets/music.wav
+
+    Browsers may block audible autoplay until the viewer interacts.
+    app.js attempts immediate autoplay and shows a clean ENTER overlay if blocked.
+  -->
+  <audio id="soundtrack" preload="auto" autoplay loop>
+    <source src="assets/music.wav" type="audio/wav">
+  </audio>
+
+  <!-- Music never blocks the page. If autoplay is blocked, use the button below. -->
+<header class="hero" id="top">
+    <div class="hero__title">
+      <span class="hero__label">STORYBOARD</span>
+      <span class="hero__project">PROJECT TITLE</span>
+    </div>
+
+    <div class="hero__meta">
+      <strong>LOCATION</strong>
+      <span>YOUR LOCATION HERE</span>
+    </div>
+
+    <div class="hero__scene">SCENE 01</div>
+  </header>
+
+  <nav class="story-nav" aria-label="Storyboard frame navigation">
+    <div class="story-nav__inner">
+      <a href="#frame-1">01</a>
+      <a href="#frame-2">02</a>
+      <a href="#frame-3">03</a>
+      <a href="#frame-4">04</a>
+      <a href="#frame-5">05</a>
+      <a href="#frame-6">06</a>
+      <a href="#frame-7">07</a>
+    </div>
+  </nav>
+
+  <main class="sheet">
+    <section class="story-grid">
+
+      <article class="story-card reveal" id="frame-1">
+        <h2 class="frame-title">FRAME 1</h2>
+        <figure class="media-frame">
+          <img src="assets/1.gif" alt="Storyboard frame 1" loading="eager">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Establishing shot over the ocean.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Wide establishing</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Wide lens / stabilized camera</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal" id="frame-2">
+        <h2 class="frame-title">FRAME 2</h2>
+        <figure class="media-frame">
+          <img src="assets/2.gif" alt="Storyboard frame 2" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Close portrait moment inside the sequence.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Close-up</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Handheld / portrait lens</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal" id="frame-3">
+        <h2 class="frame-title">FRAME 3</h2>
+        <figure class="media-frame">
+          <img src="assets/3.gif" alt="Storyboard frame 3" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Night portrait with passing light streaks.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Medium close-up</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Low-light handheld camera</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal" id="frame-4">
+        <h2 class="frame-title">FRAME 4</h2>
+        <figure class="media-frame">
+          <img src="assets/4.gif" alt="Storyboard frame 4" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Group moment captured during blue hour.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Wide group shot</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Handheld wide lens</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal" id="frame-5">
+        <h2 class="frame-title">FRAME 5</h2>
+        <figure class="media-frame">
+          <img src="assets/5.gif" alt="Storyboard frame 5" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Passenger-side driving shot beside the water.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>POV / interior wide</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Car rig / handheld</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal" id="frame-6">
+        <h2 class="frame-title">FRAME 6</h2>
+        <figure class="media-frame">
+          <img src="assets/6.gif" alt="Storyboard frame 6" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Warm low-light close-up with dramatic movement.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Extreme close-up</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Fast lens / low-light camera</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card story-card--wide reveal" id="frame-7">
+        <h2 class="frame-title">FRAME 7</h2>
+        <figure class="media-frame">
+          <img src="assets/7.gif" alt="Storyboard frame 7" loading="lazy">
+        </figure>
+        <div class="details">
+          <div class="detail-row">
+            <span>DESCRIPTION</span>
+            <strong>Bright waterside closing image.</strong>
+          </div>
+          <div class="detail-row">
+            <span>SHOT</span>
+            <strong>Wide environmental</strong>
+          </div>
+          <div class="detail-row">
+            <span>EQUIPMENT</span>
+            <strong>Wide lens / natural light</strong>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="page-footer">
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
